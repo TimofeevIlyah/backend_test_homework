@@ -32,7 +32,8 @@ class FullTimeEmployee(Employee):
         return self.__salary*0.8
 
     def get_unpaid_vacation(self, start_date: str, vacation_days: int):
-        return f'Начало неоплачиваемого отпуска: {start_date}, продолжительность: {vacation_days} дней.'
+        return f'Начало неоплачиваемого отпуска: {start_date}, '
+        'продолжительность: {vacation_days} дней.'
 
 
 class PartTimeEmployee(Employee):
@@ -44,4 +45,4 @@ print(full_time_employee.get_unpaid_vacation('2023-07-01', 5))
 part_time_employee = PartTimeEmployee('Alena', 'Pyatnitskaya', 'f')
 print(part_time_employee.get_vacation_details())
 print(full_time_employee._employee_id)
-#print(full_time_employee.__get_vacation_salary)
+# print(full_time_employee.__get_vacation_salary)
