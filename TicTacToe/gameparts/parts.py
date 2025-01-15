@@ -25,7 +25,7 @@ class Board():
         )
 
     def is_board_full(self):
-        for i in range(self.field_sizefiel):
+        for i in range(self.field_size):
             for j in range(self.field_size):
                 if self.board[i][j] == ' ':
                     return False
@@ -33,8 +33,10 @@ class Board():
 
     def check_win(self, player):
         for i in range(self.field_size):
-            if (all([self.board[i][j] == player for j in range(self.field_size)]) or
-                all([self.board[j][i] == player for j in range(self.field_size)])):
+            if (all([self.board[i][j] == player
+                     for j in range(self.field_size)]) or
+                        all([self.board[j][i] == player
+                             for j in range(self.field_size)])):
                 return True
         if (
             self.board[0][0] == self.board[1][1] == self.board[2][2] == player
@@ -44,3 +46,7 @@ class Board():
             return True
 
         return False
+
+    def save_results(self, result: str):
+        with open('results.txt', 'a') as w:
+            w.write(result+'\n')
