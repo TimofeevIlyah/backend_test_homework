@@ -1,7 +1,4 @@
-# import sys
-# sys.path.append('./venv/lib/python3.12/site-packages')
 import requests
-
 
 url = 'https://wttr.in'
 
