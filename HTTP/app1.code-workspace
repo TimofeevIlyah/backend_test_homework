@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "app1",
+			"path": "../../app1"
+		},
+		{
+			"name": "app2",
+			"path": "../../app2"
+		},
+		{
+			"name": "backend_test_homework",
+			"path": ".."
+		}
+	]
+}
